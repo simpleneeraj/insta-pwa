@@ -1,0 +1,49 @@
+//======================================//
+// Tweet
+//======================================//
+
+.Tweet {
+  padding: 0.6rem;
+  display: grid;
+  gap: 0.5rem;
+  .Top {
+    display: grid;
+    gap: 0.4rem;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    div {
+      img {
+        max-width: 100%;
+        border-radius: 100%;
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+      }
+    }
+  }
+  .Middle {
+    img {
+      height: 150px;
+      max-width: 100%;
+      border-radius: 8px;
+      background: #00000073;
+      margin: 0.4rem 0;
+      width: 100%;
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100px;
+    }
+  }
+  .Bottom {
+    p {
+      span {
+        color: var(--Background-4);
+      }
+    }
+  }
+}
+
+#Twitter {
+  justify-self: flex-end;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,30 @@
+.Reminder {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  user-select: none;
+  // padding: 0.4rem;
+  .Top {
+    padding: 0.6rem;
+    display: grid;
+    place-content: center;
+  }
+  .Middle {
+    padding: 0.5rem 1rem;
+    p {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      outline: none;
+      border: none;
+    }
+  }
+  .Bottom {
+    padding: 0.8rem;
+    border-top: 1px solid #aaaaaa94;
+    p {
+      color: var(--Background-4);
+      text-align: center;
+    }
+  }
+}

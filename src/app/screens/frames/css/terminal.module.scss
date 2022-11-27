@@ -1,0 +1,20 @@
+.MacTerminal {
+  padding: 0.4rem;
+  .Dots {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    div {
+      margin: 0.2rem;
+      display: flex;
+      border-radius: 100px;
+      height: 12px;
+      width: 12px;
+      background-color: #aaaaaa94;
+    }
+  }
+  .Text {
+    padding: 0.4rem;
+  }
+}

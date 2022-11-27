@@ -1,0 +1,43 @@
+.Instagram .Instagram_Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Instagram .Instagram_Image span img {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.Instagram .Instagram_Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -10px 0;
+  padding: 0.7rem 0.4rem;
+}
+.Instagram .Instagram_Text div {
+  display: flex;
+  justify-content: center;
+  padding: 0 0.4rem;
+  min-width: 40px;
+  max-width: 100%;
+}
+
+.Instagram .Instagram_Bottom {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Instagram .Instagram_Bottom div {
+  border-radius: 6px;
+  width: 100%;
+  margin: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: text;
+}

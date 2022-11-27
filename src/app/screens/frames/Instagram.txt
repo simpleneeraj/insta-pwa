@@ -1,0 +1,26 @@
+import Container from "../Container";
+import css from "../Style/Instagram.module.scss";
+import { Text } from "../Text";
+const Instagram = () => {
+  return (
+    <>
+      <Container>
+        <div className={css.Instagram}>
+          <div className={css.Instagram_Image}>
+            <span>
+              <img src={`/simpleneeraj.webp`} alt="me" />
+            </span>
+          </div>
+          <div className={css.Instagram_Text}>
+            <Text>Hello</Text>
+          </div>
+          <div className={css.Instagram_Bottom}>
+            <Text>Hello</Text>
+          </div>
+        </div>
+      </Container>
+    </>
+  );
+};
+
+export default Instagram;

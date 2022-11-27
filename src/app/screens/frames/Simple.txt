@@ -1,0 +1,17 @@
+import React from "react";
+import useThoughts from "../../EditorHooks/useThoughts";
+import Container from "../Container";
+import { Text } from "../Text";
+import css from "./../Style/Common.module.scss";
+const Simple = () => {
+  const { thougts } = useThoughts();
+  return (
+    <Container>
+      <div className={css.Simple}>
+        <Text>{thougts.Text}</Text>
+      </div>
+    </Container>
+  );
+};
+
+export default Simple;

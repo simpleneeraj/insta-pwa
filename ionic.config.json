@@ -1,0 +1,7 @@
+{
+  "name": "insta-pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

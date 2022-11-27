@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+.top {
+  display: grid;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  grid-template-columns: 8% 1fr 1fr;
+  img {
+    width: 18px;
+    height: auto;
+    margin-right: 7px;
+  }
+  p {
+    padding: 0;
+    line-height: normal;
+    &:nth-of-type(1) {
+      text-transform: uppercase;
+    }
+    &:nth-last-of-type(1) {
+      text-align: right;
+    }
+  }
+}

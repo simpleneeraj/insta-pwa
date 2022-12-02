@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const templatesSlice = createSlice({
     name: 'Templates',
     initialState: {
-        name: 'TERMINAL',
+        name: 'NOTIFICATION',
     },
     reducers: {
         updateTemplate: (state, action) => {

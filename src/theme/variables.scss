@@ -74,6 +74,10 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /* Font Family */
+  --ion-inter-font: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Roboto", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

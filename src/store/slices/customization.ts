@@ -17,10 +17,10 @@ const initialState = {
         'font-family': `HelveticaRoman`,
     },
     cardStyle: {
-        alpha: 1,
+        alpha: 50,
         'blur': 10,
         'round': 15,
-        'background-color': 'rgba(0,0,0,.5)',
+        'background-color': 'rgba(250,250,250,.8)',
     },
     frameStyle: {
         'background': url,
@@ -82,8 +82,7 @@ const customizationSlice = createSlice({
             state.lockScreen[action.payload.key] = action.payload.value
         },
         customizationTextContent: (state, action) => {
-            // @ts-expect-error
-            state.textContent[action.payload.key] = action.payload.value
+            state.textContent = action.payload
         },
     }
 })

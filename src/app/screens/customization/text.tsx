@@ -24,7 +24,6 @@ const TextCustomization = () => {
             min={0}
             max={30}
             step={0.5}
-            mode="ios"
             name="font-size"
             value={customizationState.textStyle["font-size"]}
             onIonChange={({ target }) =>
@@ -46,7 +45,6 @@ const TextCustomization = () => {
             max={900}
             step={100}
             snaps={true}
-            mode="ios"
             name="font-weight"
             value={customizationState.textStyle["font-weight"]}
             onIonChange={({ target }) =>
@@ -67,7 +65,6 @@ const TextCustomization = () => {
             min={0}
             max={5}
             step={0.1}
-            mode="ios"
             name="line-height"
             value={customizationState.textStyle["line-height"]}
             onIonChange={({ target }) =>
@@ -88,7 +85,6 @@ const TextCustomization = () => {
             min={0}
             max={5}
             step={0.1}
-            mode="ios"
             name="letter-spacing"
             value={customizationState.textStyle["letter-spacing"]}
             onIonChange={({ target }) =>
@@ -111,7 +107,7 @@ const TextCustomization = () => {
 
   return (
     <View>
-      <IonItem lines="none" mode="ios">
+      <IonItem lines="none">
         <IonSegment value={tab} onIonChange={(e) => setTab(e.target.value)}>
           {data.map((data, index) => (
             <IonSegmentButton title={data.value} key={index} value={data.value}>
@@ -120,7 +116,7 @@ const TextCustomization = () => {
           ))}
         </IonSegment>
       </IonItem>
-      <IonItem mode="ios">{RenderSlider}</IonItem>
+      <IonItem>{RenderSlider}</IonItem>
     </View>
   );
 };

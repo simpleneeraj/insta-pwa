@@ -8,22 +8,36 @@ import {
 } from "@ionic/react";
 import React from "react";
 import View from "ui/view";
+import useCustomization from "store/hooks/use-customization";
 
 const ScreenBackgrounds = () => {
+  const { customizationFrame } = useCustomization();
+
   return (
     <View>
-      <IonSegment mode="ios" value={"Hello"}>
+      <IonSegment
+        value={"Hello"}
+        style={{
+          width: "70%",
+        }}
+      >
         <IonSegmentButton>Wallpapers</IonSegmentButton>
         <IonSegmentButton>Hello</IonSegmentButton>
         <IonSegmentButton>Gradients</IonSegmentButton>
       </IonSegment>
-      <IonSearchbar mode="ios" />
+      <IonSearchbar />
       <IonList className={css.Default}>
         {/* <ImagePicker /> */}
         {wall.map((d, i) => (
-          <div className={css.Items}>
+          <View
+            className={css.Items}
+            key={i}
+            onClick={() => {
+              customizationFrame("background", d.regular);
+            }}
+          >
             <img loading="lazy" src={d.small} alt="im" />
-          </div>
+          </View>
         ))}
       </IonList>
     </View>

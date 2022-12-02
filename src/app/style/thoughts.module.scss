@@ -1,0 +1,38 @@
+.container {
+  padding: 4px;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.list-container {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  border-radius: 15px;
+  padding: 0.94118rem;
+  border: 1px solid;
+  border-left-width: 1px;
+  //   background-color: #323232;
+  background-color: var(--ion-card-background);
+  //   border-color: #9a9a9e;
+  border-color: var(--ion-color-step-400);
+  //   box-shadow: 0 0 1px 0 #9a9a9e inset, 0 0 1px 0 #9a9a9e;
+  box-shadow: 0 0 1px 0 var(--ion-color-step-400) inset,
+    0 0 1px 0 var(--ion-color-step-400);
+
+  .label,
+  .content {
+    font-size: 1rem;
+    line-height: 1.52944;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    color: #fff;
+  }
+  .label {
+    color: #9a9a9e;
+  }
+}

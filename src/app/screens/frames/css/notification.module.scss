@@ -1,21 +1,27 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  padding: 10px;
+  gap: 4px;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
 .top {
   display: grid;
   align-items: center;
-  margin-bottom: 0.4rem;
-  grid-template-columns: 8% 1fr 1fr;
+  grid-template-columns: 22px 1fr 1fr;
   img {
     width: 18px;
     height: auto;
-    margin-right: 7px;
   }
   p {
     padding: 0;
     line-height: normal;
+    opacity: 0.9;
     &:nth-of-type(1) {
       text-transform: uppercase;
     }
@@ -23,4 +29,29 @@
       text-align: right;
     }
   }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  // gap: 3px;
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+
+    &:nth-of-type(1) {
+      font-weight: 500;
+    }
+    &:nth-last-of-type(1) {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+  }
+}
+
+.more {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }

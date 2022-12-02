@@ -20,7 +20,7 @@ const ScreenTemplates = () => {
       {loaded && (
         <React.Fragment>
           {framesArray.map((data, index) => (
-            <IonList mode="ios" key={index}>
+            <IonList key={index}>
               {/* <IonListHeader>Albums</IonListHeader> */}
               <IonItem>
                 <IonThumbnail slot="start">
@@ -42,7 +42,7 @@ const ScreenTemplates = () => {
       {!loaded && (
         <React.Fragment>
           {Array.from(Array(5).keys()).map((_, i) => (
-            <IonList mode="ios" key={i}>
+            <IonList key={i}>
               <IonItem>
                 <IonThumbnail slot="start">
                   <IonSkeletonText animated={true}></IonSkeletonText>

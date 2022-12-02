@@ -1,76 +1,70 @@
 import React from "react";
 import { useCapture } from "plugins/capture";
 import {
+  IonButton,
   IonItem,
   IonList,
   IonSelect,
   IonSelectOption,
+  IonSpinner,
   useIonActionSheet,
 } from "@ionic/react";
+import View from "ui/view";
 
 const ScreenDownload = () => {
   const { captureImage, isLoading } = useCapture();
 
-  const [present] = useIonActionSheet();
+  // const [present] = useIonActionSheet();
 
-  const onShow = () => {
-    present({
-      header: "Download Image",
-      // subHeader: "Hello",
-      mode: "ios",
-      buttons: [
-        {
-          text: "Export",
-          data: {
-            action: "share",
-          },
-        },
-        {
-          text: "Download",
-          data: {
-            action: "cancle",
-          },
-        },
-        {
-          text: "Download",
-          role: "destructive",
-          data: {
-            action: "delete",
-          },
+  // const onShow = () => {
+  //   present({
+  //     header: "Download Image",
+  //     // subHeader: "Hello",
+  //     mode: "ios",
+  //     buttons: [
+  //       {
+  //         text: "Export",
+  //         data: {
+  //           action: "share",
+  //         },
+  //       },
+  //       {
+  //         text: "Download",
+  //         data: {
+  //           action: "cancle",
+  //         },
+  //       },
+  //       {
+  //         text: "Download",
+  //         role: "destructive",
+  //         data: {
+  //           action: "delete",
+  //         },
 
-          handler() {
-            console.log("Hello");
-          },
-        },
-      ],
-    });
-  };
+  //         handler() {
+  //           console.log("Hello");
+  //         },
+  //       },
+  //     ],
+  //   });
+  // };
   return (
-    <div>
-      <button
+    <View>
+      <h4>Download Image</h4>
+      <IonButton
         onClick={
           () =>
             captureImage({
               imageFormat: "png",
-              pixelRatio: 4,
+              pixelRatio: 8,
               isDebug: true,
             })
           // onShow()
         }
       >
-        {isLoading ? "Exporting..." : "Export"}
-      </button>
-      <IonList>
-        <IonItem>
-          <IonSelect mode="ios" placeholder="Choose Image Format">
-            <IonSelectOption value={"png"}>PNG</IonSelectOption>
-            <IonSelectOption value={"jpg"}>JPG</IonSelectOption>
-            <IonSelectOption value={"webp"}>WEBP</IonSelectOption>
-            <IonSelectOption value={"svg"}>SVG</IonSelectOption>
-          </IonSelect>
-        </IonItem>
-      </IonList>
-    </div>
+        {isLoading ? <IonSpinner /> : "Export"}
+      </IonButton>
+    </View>
   );
 };
 export default ScreenDownload;

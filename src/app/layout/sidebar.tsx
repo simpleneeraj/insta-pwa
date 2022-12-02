@@ -24,7 +24,7 @@ const SideBar = () => {
               title={data.name}
               key={index}
             >
-              {<data.icon mode="ios" />}
+              {<data.icon />}
             </Button>
           );
         })}

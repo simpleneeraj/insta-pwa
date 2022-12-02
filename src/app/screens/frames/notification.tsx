@@ -3,19 +3,19 @@ import css from "./css/notification.module.scss";
 
 const IosNotification = (props: FrameProps) => {
   const { message, title, notificationProps } = props;
+  // 3D Mode
   return (
     <div className={css.container}>
       <div className={css.top}>
         <img src={notificationProps?.appIcon} alt="notification-icon" />
-        <p style={{ fontSize: 14 }}>{notificationProps?.appName}</p>
-        <p style={{ fontSize: 14 }}>{notificationProps?.timestamp}</p>
+        <p style={{ fontSize: 13 }}>{notificationProps?.appName}</p>
+        <p style={{ fontSize: 13 }}>{notificationProps?.timestamp}</p>
       </div>
-      <div className={css.Title}>
+      <div className={css["content"]}>
         <p>{title}</p>
-      </div>
-      <div className={css.Text}>
         <p>{message}</p>
       </div>
+      {/* <div className={css.more}>11 more notification</div> */}
     </div>
   );
 };

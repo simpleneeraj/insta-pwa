@@ -7,6 +7,7 @@ interface ViewContainerProps extends Props {}
 const ViewContainer = ({ children, style, ...rest }: ViewContainerProps) => {
   const baseStyle = {
     padding: "4px",
+    overflow: "auto",
     ...style,
   } as React.CSSProperties;
   return (

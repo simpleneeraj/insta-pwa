@@ -10,6 +10,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 import useCustomization from "store/hooks/use-customization";
+import { HexAlphaColorPicker, RgbColorPicker } from "plugins/color-picker";
 
 const CardCustomization = () => {
   const [tab, setTab] = React.useState<string | null | undefined>("alpha");
@@ -84,9 +85,11 @@ const CardCustomization = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [customizationState.cardStyle, tab]);
 
+  // const color=React.
+
   return (
     <View>
-      <IonItem lines="none" mode="ios">
+      <IonItem lines="none">
         <IonSegment value={tab} onIonChange={(e) => setTab(e.target.value)}>
           {data.map((data, index) => (
             <IonSegmentButton title={data.value} key={index} value={data.value}>
@@ -95,7 +98,11 @@ const CardCustomization = () => {
           ))}
         </IonSegment>
       </IonItem>
-      <IonItem mode="ios">{RenderSlider}</IonItem>
+      <IonItem>{RenderSlider}</IonItem>
+      <HexAlphaColorPicker
+        color={customizationState.cardStyle["background-color"]}
+        onChange={(value) => customizationCard("background-color", value)}
+      />
     </View>
   );
 };

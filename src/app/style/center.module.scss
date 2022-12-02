@@ -3,10 +3,6 @@
 .center-container {
   border-radius: 4px;
   overflow: hidden;
-  * {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 // .frame-container {
@@ -30,7 +26,7 @@
 // Box Container
 .BoxContainer {
   max-width: 300px;
-  padding: 0.4rem 0;
+  // padding: 0.4rem 0;
   transition: 0.1s ease-in;
   z-index: 5;
   position: relative;
